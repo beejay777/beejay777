@@ -1,20 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-modern">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of a DevOps Engineer & IT Auditor specializing in Kubernetes, AWS, automation, and security compliance">
-    <title>DevOps Engineer & IT Auditor Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description"
+        content="Platform / SRE Engineer portfolio — production Kubernetes on AWS, EKS migrations, observability, DevSecOps, and Kubestronaut-certified">
+    <title>Platform / SRE Engineer | Bijay Pathak</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modern.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- GSAP for modern animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+
 </head>
+
 <body>
+    <div id="torch-overlay"></div>
     <div class="noise-overlay"></div>
     <canvas id="particle-canvas"></canvas>
-    
+
+
     <header>
         <div class="logo">
             <a href="#">BP</a>
@@ -25,6 +38,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -40,13 +54,18 @@
             <div class="container">
                 <p class="greeting">Hi, my name is</p>
                 <h1 class="name">Bijay Pathak</h1>
-                <h2 class="title">a DevOps Engineer & IT Auditor</h2>
-                <p class="tagline"><span class="highlight">Streamlining DevOps, Securing Compliance</span></p>
-                <p class="description">I specialize in designing and implementing robust CI/CD pipelines, managing Kubernetes clusters, and ensuring cloud security and compliance standards.</p>
+                <h2 class="title">Platform / Site Reliability Engineer</h2>
+                <p class="tagline"><span class="highlight">DevSecOps | Kubestronaut | AWS DevOps Professional</span></p>
+                <p class="description">Building secure, reliable Kubernetes platforms on AWS, with measurable
+                    improvements in cost, performance, and MTTR. I design and operate production Kubernetes platforms,
+                    leading migrations, autoscaling, observability, and security hardening. Remote-first,
+                    async-friendly, and comfortable collaborating across time zones.</p>
                 <div class="cta-buttons">
                     <a href="#about" class="btn primary-btn">Learn More</a>
                     <a href="#contact" class="btn secondary-btn">Get In Touch</a>
                 </div>
+                <p class="hero-timezone"><i class="fas fa-globe"></i> Timezone: UTC+5:45 &nbsp;|&nbsp; EU &amp; US
+                    overlap</p>
             </div>
         </section>
 
@@ -55,18 +74,25 @@
                 <h2 class="section-title"><span class="section-number">01.</span> About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Hello! I'm a DevOps Engineer and IT Auditor with 6+ years of experience in automating infrastructure, orchestrating containers, and ensuring security compliance across cloud environments.</p>
-                        <p>My expertise lies in designing and implementing scalable solutions that bridge the gap between development and operations while maintaining rigorous security standards.</p>
-                        <p>Here are a few technologies I've been working with recently:</p>
+                        <p>I'm a Platform / SRE engineer focused on production Kubernetes on AWS. I help teams
+                            migrate to EKS, scale efficiently with Karpenter, improve reliability with strong
+                            observability and incident practices, and embed security controls using a DevSecOps
+                            mindset.</p>
+                        <p>With 7+ years of hands-on experience, I've led platform migrations, built autoscaling
+                            infrastructure, reduced MTTR through better observability, and driven cost optimization
+                            across cloud environments.</p>
+                        <p>Here are the core technologies and practices I work with:</p>
                         <ul class="skills-list">
-                            <li><span class="skill-icon"><i class="fab fa-docker"></i></span> Kubernetes (K8s)</li>
-                            <li><span class="skill-icon"><i class="fab fa-aws"></i></span> AWS Cloud</li>
+                            <li><span class="skill-icon"><i class="fab fa-docker"></i></span> Kubernetes
+                                (Kubestronaut)</li>
+                            <li><span class="skill-icon"><i class="fab fa-aws"></i></span> AWS (EKS, IAM, VPC)</li>
+                            <li><span class="skill-icon"><i class="fas fa-terminal"></i></span> Terraform + GitOps
+                                (ArgoCD)</li>
+                            <li><span class="skill-icon"><i class="fas fa-chart-line"></i></span> Observability
+                                (Prometheus / Grafana / Loki)</li>
+                            <li><span class="skill-icon"><i class="fas fa-shield-alt"></i></span> Security Hardening
+                                (CKS)</li>
                             <li><span class="skill-icon"><i class="fas fa-code-branch"></i></span> CI/CD Pipelines</li>
-                            <li><span class="skill-icon"><i class="fas fa-terminal"></i></span> Infrastructure as Code</li>
-                            <li><span class="skill-icon"><i class="fas fa-shield-alt"></i></span> Cloud Security</li>
-                            <li><span class="skill-icon"><i class="fas fa-chart-line"></i></span> Monitoring & Observability</li>
-                            <li><span class="skill-icon"><i class="fas fa-robot"></i></span> Automation</li>
-                            <li><span class="skill-icon"><i class="fas fa-check-double"></i></span> Compliance Frameworks</li>
                         </ul>
                     </div>
                     <div class="about-image">
@@ -84,27 +110,37 @@
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3 class="job-title">DevOps Lead & IT Auditor</h3>
+                            <h3 class="job-title">Lead Platform / DevOps Engineer</h3>
                             <h4 class="company">Instant Access Technologies</h4>
                             <p class="job-period">May 2024 - Present</p>
                             <ul class="job-description">
-                                <li>Led the implementation of Kubernetes clusters across multi-cloud environments</li>
-                                <li>Redesigned CI/CD pipelines reducing deployment time by 70%</li>
-                                <li>Led compliance assessments for SOC 2, ISO 27001, and HIPAA frameworks</li>
-                                <li>Reduced the cloud cost by 30% through optimized resource utilization</li>
+                                <li>Architected and led Kubernetes platform deployment across multi-cloud environments,
+                                    standardising workload orchestration</li>
+                                <li>Redesigned CI/CD pipelines with GitOps (ArgoCD), reducing deployment lead time by
+                                    70%</li>
+                                <li>Drove 30% cloud cost reduction through right-sizing, Karpenter autoscaling, and
+                                    reserved-instance planning</li>
+                                <li>Established SLO-driven reliability practices and on-call runbooks for production
+                                    services</li>
+                                <li>Supported SOC 2, ISO 27001, and HIPAA compliance as part of broader platform
+                                    security posture</li>
                             </ul>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3 class="job-title">Senior DevOps Engineer</h3>
+                            <h3 class="job-title">Senior DevOps / Platform Engineer</h3>
                             <h4 class="company">Grepsr</h4>
                             <p class="job-period">Mar 2023 - May 2024</p>
                             <ul class="job-description">
-                                <li>Conducted comprehensive IT security audits for Fortune 500 companies</li>
-                                <li>Implemented comprehensive monitoring solutions with Prometheus and Grafana</li>
-                                <li>Automated audit processes reducing documentation time by 40%</li>
-                                <li>Developed and implemented cloud security best practices</li>
+                                <li>Built end-to-end observability stack with Prometheus, Grafana, and Loki, reducing
+                                    MTTR by 45%</li>
+                                <li>Designed and maintained EKS-based platform serving production workloads at scale
+                                </li>
+                                <li>Automated infrastructure provisioning and drift detection with Terraform, cutting
+                                    manual toil by 40%</li>
+                                <li>Implemented security hardening across clusters, including RBAC, network policies,
+                                    and image scanning</li>
                             </ul>
                         </div>
                     </div>
@@ -114,10 +150,14 @@
                             <h4 class="company">Genese Solution</h4>
                             <p class="job-period">Feb 2022 - Mar 2023</p>
                             <ul class="job-description">
-                                <li>Built and maintained AWS infrastructure using CloudFormation</li>
-                                <li>Implemented containerization strategies with Docker and Kubernetes</li>
-                                <li>Developed automated testing and deployment pipelines</li>
-                                <li>Collaborated with development teams to improve application performance</li>
+                                <li>Built and managed AWS infrastructure using Terraform and CloudFormation for
+                                    multi-account environments</li>
+                                <li>Led containerisation adoption with Docker and Kubernetes, migrating legacy workloads
+                                    to EKS</li>
+                                <li>Developed CI/CD pipelines with automated testing, security scanning, and blue-green
+                                    deployments</li>
+                                <li>Improved application reliability through load testing, capacity planning, and
+                                    incident response processes</li>
                             </ul>
                         </div>
                     </div>
@@ -127,10 +167,14 @@
                             <h4 class="company">Huawei Cloud</h4>
                             <p class="job-period">Aug 2021 - Jan 2022</p>
                             <ul class="job-description">
-                                <li>Architected and implemented cloud solutions using Huawei Cloud services</li>
-                                <li>Designed and implemented containerized applications with Docker and Kubernetes</li>
-                                <li>Developed automated testing and deployment pipelines</li>
-                                <li>Collaborated with development teams to improve application performance</li>
+                                <li>Architected cloud-native solutions on Huawei Cloud, designing for high availability
+                                    and fault tolerance</li>
+                                <li>Designed containerised microservice architectures with Kubernetes for production
+                                    deployments</li>
+                                <li>Built automated provisioning and deployment pipelines for customer-facing platforms
+                                </li>
+                                <li>Optimised application performance through caching strategies, CDN configuration, and
+                                    auto-scaling policies</li>
                             </ul>
                         </div>
                     </div>
@@ -140,10 +184,14 @@
                             <h4 class="company">Genese Solution</h4>
                             <p class="job-period">Jan 2019 - Apr 2021</p>
                             <ul class="job-description">
-                                <li>Built and maintained AWS infrastructure using CloudFormation</li>
-                                <li>Implemented containerization strategies with Docker and Kubernetes</li>
-                                <li>Developed automated testing and deployment pipelines</li>
-                                <li>Collaborated with development teams to improve application performance</li>
+                                <li>Built foundational AWS infrastructure using CloudFormation and early Terraform
+                                    adoption</li>
+                                <li>Pioneered Kubernetes adoption within the team, containerising applications with
+                                    Docker and K8s</li>
+                                <li>Established CI/CD pipelines with Jenkins and GitHub Actions, enabling continuous
+                                    delivery</li>
+                                <li>Collaborated with development teams on performance tuning, monitoring, and incident
+                                    triage</li>
                             </ul>
                         </div>
                     </div>
@@ -155,44 +203,90 @@
             <div class="container">
                 <h2 class="section-title"><span class="section-number">03.</span> Certifications</h2>
                 <div class="certs-container">
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                    <div class="cert-card cert-featured">
+                        <div class="cert-icon"><img src="https://cdn.simpleicons.org/kubernetes/FF9000" alt="Kubernetes"
+                                width="50" /></div>
                         <div class="cert-details">
-                            <h3>AWS Certified DevOps Engineer - Professional</h3>
-                            <p class="cert-issuer">Amazon Web Services</p>
-                            <p class="cert-date">Issued: December 2023</p>
+                            <h3>Kubestronaut</h3>
+                            <p class="cert-subtitle">All 5 Kubernetes Certifications Completed</p>
+                            <p class="cert-issuer">Cloud Native Computing Foundation (CNCF)</p>
                         </div>
                     </div>
                     <div class="cert-card">
-                        <div class="cert-icon"><img src="https://cdn.simpleicons.org/kubernetes/FF9000" alt="Kubernetes" width="50" /></div>
+                        <div class="cert-icon"><img src="https://cdn.simpleicons.org/kubernetes/FF9000" alt="Kubernetes"
+                                width="50" /></div>
+                        <div class="cert-details">
+                            <h3>Certified Kubernetes Administrator (CKA)</h3>
+                            <p class="cert-issuer">Cloud Native Computing Foundation</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><img src="https://cdn.simpleicons.org/kubernetes/FF9000" alt="Kubernetes"
+                                width="50" /></div>
+                        <div class="cert-details">
+                            <h3>Certified Kubernetes Security Specialist (CKS)</h3>
+                            <p class="cert-issuer">Cloud Native Computing Foundation</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><img src="https://cdn.simpleicons.org/kubernetes/FF9000" alt="Kubernetes"
+                                width="50" /></div>
                         <div class="cert-details">
                             <h3>Certified Kubernetes Application Developer (CKAD)</h3>
                             <p class="cert-issuer">Cloud Native Computing Foundation</p>
-                            <p class="cert-date">Issued: November 2023</p>
                         </div>
                     </div>
                     <div class="cert-card">
                         <div class="cert-icon"><i class="fab fa-aws"></i></div>
                         <div class="cert-details">
-                            <h3>AWS Certified Developer - Associate</h3>
+                            <h3>AWS Certified DevOps Engineer – Professional</h3>
                             <p class="cert-issuer">Amazon Web Services</p>
-                            <p class="cert-date">Issued: January 2019</p>
                         </div>
                     </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-lock"></i></div>
-                        <div class="cert-details">
-                            <h3>Certified Information Security Manager (CISM)</h3>
-                            <p class="cert-issuer">ISACA</p>
-                            <p class="cert-date">Issued: June 2021</p>
+                </div>
+                <p class="certs-verify"><a href="https://www.credly.com/users/beejaypathak/badges" target="_blank"
+                        rel="noopener">Verify all badges on Credly <i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+        </section>
+
+        <section id="case-studies" class="case-studies-section">
+            <div class="container">
+                <h2 class="section-title"><span class="section-number">04.</span> Case Studies</h2>
+                <div class="cases-container">
+                    <div class="case-card">
+                        <div class="case-icon"><i class="fas fa-exchange-alt"></i></div>
+                        <h3 class="case-title">ECS/EC2 → EKS Migration</h3>
+                        <p class="case-description">Led a full platform migration from legacy ECS and EC2 workloads to
+                            Amazon EKS, re-architecting services for Kubernetes-native orchestration with Helm charts
+                            and ArgoCD-driven GitOps.</p>
+                        <div class="case-metrics">
+                            <span class="metric"><i class="fas fa-server"></i> 50+ services migrated</span>
+                            <span class="metric"><i class="fas fa-clock"></i> Zero-downtime cutover</span>
+                            <span class="metric"><i class="fas fa-tachometer-alt"></i> 40% faster deployments</span>
                         </div>
                     </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-cloud"></i></div>
-                        <div class="cert-details">
-                            <h3>Google Cloud Professional Cloud Architect</h3>
-                            <p class="cert-issuer">Google Cloud</p>
-                            <p class="cert-date">Issued: September 2021</p>
+                    <div class="case-card">
+                        <div class="case-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                        <h3 class="case-title">Karpenter Autoscaling</h3>
+                        <p class="case-description">Replaced Cluster Autoscaler with Karpenter for intelligent,
+                            workload-aware node provisioning. Tuned consolidation policies and spot instance strategies
+                            to balance cost with reliability.</p>
+                        <div class="case-metrics">
+                            <span class="metric"><i class="fas fa-coins"></i> 35% cost reduction</span>
+                            <span class="metric"><i class="fas fa-bolt"></i> 90s → 15s scale-up</span>
+                            <span class="metric"><i class="fas fa-check-circle"></i> 99.95% pod availability</span>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h3 class="case-title">Observability &amp; MTTR Reduction</h3>
+                        <p class="case-description">Designed a comprehensive observability platform with Prometheus,
+                            Grafana, Loki, and custom alerting rules. Introduced SLO dashboards and structured
+                            on-call rotations with post-incident reviews.</p>
+                        <div class="case-metrics">
+                            <span class="metric"><i class="fas fa-stopwatch"></i> MTTR reduced 45%</span>
+                            <span class="metric"><i class="fas fa-bell"></i> Alert noise down 60%</span>
+                            <span class="metric"><i class="fas fa-eye"></i> Full-stack traceability</span>
                         </div>
                     </div>
                 </div>
@@ -201,9 +295,11 @@
 
         <section id="contact" class="contact-section">
             <div class="container">
-                <h2 class="section-title"><span class="section-number">04.</span> Get In Touch</h2>
-                <p class="contact-intro">I'm currently open to new opportunities and collaborations. Whether you have a question or just want to say hi, I'll do my best to get back to you!</p>
-                
+                <h2 class="section-title"><span class="section-number">05.</span> Get In Touch</h2>
+                <p class="contact-intro">I'm currently open to global remote opportunities in Platform Engineering
+                    and SRE. Whether you have a role, a question, or just want to connect — I'd love to hear from
+                    you.</p>
+
                 <div class="contact-content">
                     <form class="contact-form">
                         <div class="form-group">
@@ -224,7 +320,7 @@
                         </div>
                         <button type="submit" class="btn primary-btn">Send Message</button>
                     </form>
-                    
+
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -232,22 +328,28 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Berkshire, UK</span>
+                            <span>Nepal</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Open to Global Remote</span>
                         </div>
                         <div class="social-links">
-                            <a href="https://linkedin.com/in/beejaypathak" target="_blank" aria-label="LinkedIn Profile">
+                            <a href="https://linkedin.com/in/beejaypathak" target="_blank"
+                                aria-label="LinkedIn Profile">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                             <a href="https://twitter.com/beejaypathak" target="_blank" aria-label="X (Twitter) Profile">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="https://github.com/beejay777/beejay777" target="_blank" aria-label="GitHub Profile">
+                            <a href="https://github.com/beejay777/beejay777" target="_blank"
+                                aria-label="GitHub Profile">
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="https://instagram.com/beejaypathak" target="_blank" aria-label="Instagram Profile">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://youtube.com/@beejaypathak" target="_blank" aria-label="YouTube Channel">
+                            <a href="https://youtube.com/beejaypathak" target="_blank" aria-label="YouTube Channel">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -299,7 +401,21 @@
         </ul>
     </div>
 
+    <!-- Mobile Experience Modal -->
+    <div id="exp-modal" class="exp-modal-overlay" aria-hidden="true">
+        <div class="exp-modal-content">
+            <button class="exp-modal-close" aria-label="Close">&times;</button>
+            <h3 class="exp-modal-title"></h3>
+            <h4 class="exp-modal-company"></h4>
+            <p class="exp-modal-period"></p>
+            <ul class="exp-modal-list"></ul>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/torch.js"></script>
+    <script src="js/mobile-exp.js"></script>
 </body>
+
 </html>
